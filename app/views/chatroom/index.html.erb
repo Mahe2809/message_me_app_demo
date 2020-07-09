@@ -1,1 +1,53 @@
-<h1>Welcome to my Chatroom</h1>
+<div class="chatroom-home">
+    <%= render 'shared/top_header', title: "Start a Conversation" %>
+
+    <div class="ui two column grid">
+        <div class="twelve wide column">
+            <div class="ui fluid raise card chat-box">
+                <div class="ui small feed chat-space">
+                    <h4 class="ui header chat-header">{Group Name}</h4>
+                    <div class="event">
+                        <div class="content">
+                            <div class="summary other">
+                                <em>Person 1: </em> Hello World
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="content">
+                            <div class="summary me">
+                                Hello!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="extra content text-area">
+                    <form class="ui reply form">
+
+                        <div class="field">
+                            <div class="ui action input field input-space">
+                                <input type="text" placeholder="Type your Message...">
+                                <button class="ui button">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column">
+            <div class="ui inverted vertical menu">
+                <a class="active item">
+                    Home
+                </a>
+                <a class="item">
+                    Messages
+                </a>
+                <a class="item">
+                    Friends
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

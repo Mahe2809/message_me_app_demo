@@ -5,7 +5,39 @@
 @import "semantic-ui";
 @import "colors";
 
+.chatroom-home{
 
-.custom-nab-bar{
-    padding: 10px 0;
+    .chat-box{
+        padding: 10px;
+        // height: 400px;
+    }
+    .chat-header{
+        text-align: center;
+        background: black;
+        color: white;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        border-radius: 5px;
+    }
+    .chat-space{
+        height: 310px;
+        overflow: auto;
+    }
+    .other{
+        padding: 10px;
+        background-color: lightcyan;
+    }
+    .me{
+        float: right;
+        padding: 10px;
+        background-color: lightyellow;
+    }
+    .input-space{
+        width: 90%;
+    }
+    .text-area{
+        height: 60px;
+    }
+
 }
