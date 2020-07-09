@@ -1,25 +1,12 @@
 <div class="chatroom-home">
-    <%= render 'shared/top_header', title: "Start a Conversation" %>
-
+    <%= render 'shared/top_header', title: current_user.username %>
+    <%= render 'shared/flash_messages' %>
     <div class="ui two column grid">
         <div class="twelve wide column">
             <div class="ui fluid raise card chat-box">
                 <div class="ui small feed chat-space">
-                    <h4 class="ui header chat-header">{Group Name}</h4>
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary other">
-                                <em>Person 1: </em> Hello World
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary me">
-                                Hello!
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <%= render @messages %>
                 </div>
                 <div class="extra content text-area">
                     <form class="ui reply form">

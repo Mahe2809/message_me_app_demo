@@ -1,25 +1,23 @@
 <%= render 'shared/top_header', title:"Welcome to MessageMe Application" %>
-
+<%= render 'shared/flash_messages' %>
 <div class="ui placeholder segment">
   <div class="ui two column very relaxed stackable grid">
     <div class="column">
-      <div class="ui form">
+      <%= form_for(:session , html:{class: "ui form", role:"form"}, url: login_path) do |f| %>
         <div class="field">
-          <label>Username</label>
           <div class="ui left icon input">
-            <input type="text" placeholder="Username">
+            <%= f.text_field :username, placeholder:"Username" %>
             <i class="user icon"></i>
           </div>
         </div>
         <div class="field">
-          <label>Password</label>
           <div class="ui left icon input">
-            <input type="password">
-            <i class="lock icon"></i>
+            <%= f.password_field :password, placeholder:"Password" %>
+            <i class="user icon"></i>
           </div>
         </div>
-        <div class="ui blue submit button">Login</div>
-      </div>
+        <%= f.submit "Login", disable_with: 'Logging In...', class: "ui blue submit button" %>
+      <% end %>
     </div>
     <div class="middle aligned column">
       <div class="ui big button">

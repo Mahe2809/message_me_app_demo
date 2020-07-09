@@ -26,12 +26,20 @@
     }
     .other{
         padding: 10px;
-        background-color: lightcyan;
+        background-color: #f1f8e9;
+        width: 400px;
+        em{
+            color: $blue;
+        }
     }
     .me{
         float: right;
         padding: 10px;
         background-color: lightyellow;
+        width: 400px;
+        p{
+            float: right;
+        }
     }
     .input-space{
         width: 90%;
@@ -40,4 +48,14 @@
         height: 60px;
     }
 
+}
+
+.flash-message{
+    text-align: center;
+    color: red;
+    background: #ffebee;
+    padding: 10px;
+    font-weight: bold;
+    margin: 10px 250px;
+    border-radius: 5px;
 }
