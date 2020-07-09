@@ -5,21 +5,18 @@
         <div class="twelve wide column">
             <div class="ui fluid raise card chat-box">
                 <div class="ui small feed chat-space">
-                    
+
                     <%= render @messages %>
                 </div>
                 <div class="extra content text-area">
-                    <form class="ui reply form">
-
-                        <div class="field">
-                            <div class="ui action input field input-space">
-                                <input type="text" placeholder="Type your Message...">
-                                <button class="ui button">
-                                    Send
-                                </button>
-                            </div>
+                    <%= form_for(@message, html:{class: "ui reply form", role:"form"}, url: message_path) do |f| %>
+                    <div class="field">
+                        <div class="ui action input field input-space">
+                            <%= f.text_field :body, placeholder: "Type your Message..." %>
+                            <%= f.button "Send", class:"ui button" %>
                         </div>
-                    </form>
+                    </div>
+                    <% end %>
                 </div>
             </div>
         </div>
