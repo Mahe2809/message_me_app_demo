@@ -13,6 +13,9 @@ require("channels");
 
 $(document).on("turbolinks:load", function () {
   $(".ui.dropdown").dropdown();
+  $(".flash-message .close").on("click", function () {
+    $(this).closest(".flash-message").transition("fade");
+  });
 });
 
 // Uncomment to copy all static images under ../images to the output folder and reference
